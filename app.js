@@ -8,6 +8,7 @@ let operator;
 let num1Done = false;
 let floating = false;
 
+
 btnContainer.addEventListener("click", (e)=> {
     if(e.target.id == "n0"){
         input.innerText+= 0;
@@ -41,34 +42,35 @@ btnContainer.addEventListener("click", (e)=> {
     }
     else if(e.target.id == "division" && !num1Done && input.innerText) {
         input2.innerText += input.innerText + "÷";
-        num1 = Number(input.innerText).toFixed(4);
+        num1 = Number(input.innerText);
         operator = "division";
         input.innerText = "";
     }
     else if(e.target.id == "multi" && !num1Done && input.innerText) {
-        input2.innerText += input.innerText + "*"
-        num1 = Number(input.innerText).toFixed(4);
+        input2.innerText += input.innerText + "x"
+        num1 = Number(input.innerText);
         operator = "multi";
         input.innerText = "";
     }
     else if(e.target.id == "sub" && !num1Done && input.innerText) {
         input2.innerText += input.innerText + "-";
-        num1 = Number(input.innerText).toFixed(4);
+        num1 = Number(input.innerText);
         operator = "sub";
         input.innerText = "";
     } 
     else if(e.target.id == "add" && !num1Done && input.innerText) {
         input2.innerText += input.innerText + "+";
-        num1 = Number(input.innerText).toFixed(4);
+        num1 = Number(input.innerText);
         operator = "add";
         input.innerText = "";
     }
     else if(e.target.id == "equal" && !num1Done && input.innerText) {
         input2.innerText += input.innerText + "=";
-        num1 = Number(input.innerText).toFixed(4);
+        num1 = Number(input.innerText);
         operator = "equal";
         input.innerText = "";
     }
+    
 
 
 });
