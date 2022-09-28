@@ -51,8 +51,8 @@ btnContainer.addEventListener("click", (e)=> {
     else if(e.target.id == "multi" && !num1Done && input.innerText) {
         input2.innerText += input.innerText + "x"
         num1 = Number(input.innerText);
+        input.innerText = "";    
         operator = "multi";
-        input.innerText = "";
         num1Done = true;
         floating = false;
     }
@@ -78,6 +78,7 @@ btnContainer.addEventListener("click", (e)=> {
     }
 
     else if(e.target.id == "equal" && num1Done && input.innerText) {
+        input2.innerText += input.innerText + "=";
         num2 = Number(input.innerText);
         num1Done = false;
         floating = false;
