@@ -33,6 +33,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  background-color: rgb(34, 31, 31);
+  border-radius: 50px;
+  margin-bottom: 25px;
 }
 .button-container {
   display: grid;
